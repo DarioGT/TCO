@@ -90,13 +90,14 @@ DAJAXICE_MEDIA_PREFIX="dajaxice"
 
 
 # Additional locations of static files
+PPATHSTATIC = os.path.abspath(os.path.join( PPATHBASE, os.pardir ))
 STATICFILES_DIRS = (
-    #si se quita esta referencia deja de funcionar en DEBug
-    "static",
-    #"/home/html/static" or "C:/www/django/static".
+    PPATHSTATIC + '/globale/admin/media', 
+    # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
+
 
 #DGT:  Esto es nuevo, pero no parece tener incidencia  
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
